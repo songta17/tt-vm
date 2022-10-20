@@ -10,7 +10,7 @@ class PotatoePrice < ApplicationRecord
     biggest_gap = 0
     result.each.with_index do |value, index|
       index_du_max = result.rindex(result.max) 
-      if index_du_max > index && gap < (result.max - value) && result.max != 0
+      if index_du_max > index && biggest_gap < (result.max - value) && result.max != 0
         biggest_gap = (result.max - value) 
       end
     end
