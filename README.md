@@ -24,7 +24,7 @@ This endpoint retrieves all otatoe Prices in the database.
  ```http://localhost:3000/potatoe_prices.json?time=2022-10-2 ```
 
 ## Get the Maximal Gain
-This endpoint retrieves all maximal gain.
+This endpoint retrieves the maximal gain.
 
 ### HTTP Request
  ```GET http://localhost:3000/api/v1/potatoe_prices/maximal_gain```
@@ -32,7 +32,7 @@ This endpoint retrieves all maximal gain.
 
 | Parameter | Default | Description | 
 | ----------- | ----------- | ----------- |
-| time | nil | The result will only include maximal price for a day. |
+| time | nil | The result will return the maximal price for a day. |
 
 ### example:
  ```http://localhost:3000/api/v1/potatoe_prices/maximal_gain.json?time=2022-10-2```
