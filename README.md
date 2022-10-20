@@ -1,24 +1,41 @@
-# README
+# Introduction
+Tiny demo for an trading api.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# DATA
+After making bundle install, you can generate the seed to simulate datas.
+```rails db:create db:migrate db:seed```
 
-Things you may want to cover:
+------------------------------------------------
 
-* Ruby version
+# Potatoe Price
 
-* System dependencies
+## Get all PotatoePrices
+This endpoint retrieves all otatoe Prices in the database.
 
-* Configuration
+### HTTP Request
+ ```GET http://localhost:3000/api/v1/potatoe_prices/```
+### Query Parameters
 
-* Database creation
+| Parameter | Default | Description | 
+| ----------- | ----------- | ----------- |
+| time | nil | The result will only include potatoe prices for a day. |
 
-* Database initialization
+### example:
+ ```http://localhost:3000/potatoe_prices.json?time=2022-10-2 ```
 
-* How to run the test suite
+## Get the Maximal Gain
+This endpoint retrieves all maximal gain.
 
-* Services (job queues, cache servers, search engines, etc.)
+### HTTP Request
+ ```GET http://localhost:3000/api/v1/potatoe_prices/maximal_gain```
+### Query Parameters
 
-* Deployment instructions
+| Parameter | Default | Description | 
+| ----------- | ----------- | ----------- |
+| time | nil | The result will only include maximal price for a day. |
 
-* ...
+### example:
+ ```http://localhost:3000/api/v1/potatoe_prices/maximal_gain.json?time=2022-10-2```
+
+
+
